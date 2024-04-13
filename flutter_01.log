@@ -1,0 +1,64 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d F786EFF7-07E0-48B0-A00D-939FBBEB1FEB --devtools-server-address http://127.0.0.1:9100/ --target /Users/dulguun/Desktop/eBroker-App/lib/main.dart
+
+## exception
+
+HttpException: HttpException: Connection reset by peer, uri = http://127.0.0.1:62125/l30R1IVeTDc=/ws
+
+```
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.19.3, on macOS 14.4.1 23E224 darwin-arm64, locale en-MN)
+    • Flutter version 3.19.3 on channel stable at /Users/dulguun/Documents/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision ba39319843 (5 weeks ago), 2024-03-07 15:22:21 -0600
+    • Engine revision 2e4ba9c6fb
+    • Dart version 3.3.1
+    • DevTools version 2.31.1
+
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at /Users/dulguun/Library/Android/sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/macos#android-setup for more details.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 15.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 15E204a
+    • CocoaPods version 1.15.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2023.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0-17.0.9b1087.7-11185874)
+
+[✓] VS Code (version 1.87.2)
+    • VS Code at /Users/dulguun/Documents/Visual Studio Code.app/Contents
+    • Flutter extension version 3.86.0
+
+[✓] Connected device (3 available)
+    • iPhone 15 Pro (mobile) • F786EFF7-07E0-48B0-A00D-939FBBEB1FEB • ios            • com.apple.CoreSimulator.SimRuntime.iOS-17-4 (simulator)
+    • macOS (desktop)        • macos                                • darwin-arm64   • macOS 14.4.1 23E224 darwin-arm64
+    • Chrome (web)           • chrome                               • web-javascript • Google Chrome 123.0.6312.122
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```
