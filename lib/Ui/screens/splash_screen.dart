@@ -257,24 +257,24 @@ class SplashScreenState extends State<SplashScreen>
             backgroundColor: context.color.tertiaryColor,
             body: Stack(
               children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: SizedBox(
-                      width: 150,
-                      height: 150,
-                      child: LoadAppSettings().svg(
-                        appSettings.splashLogo!,
-                        // color: context.color.secondaryColor,
-                      )),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    key: const ValueKey("companylogo"),
-                    child: UiUtils.getSvg(AppIcons.companyLogo),
-                  ),
-                )
+                // Align(
+                //   alignment: Alignment.center,
+                //   child: SizedBox(
+                //       width: 150,
+                //       height: 150,
+                //       child: LoadAppSettings().svg(
+                //         appSettings.splashLogo!,
+                //         // color: context.color.secondaryColor,
+                //       )),
+                // ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 16.0),
+                //   child: Align(
+                //     alignment: Alignment.bottomCenter,
+                //     key: const ValueKey("companylogo"),
+                //     child: UiUtils.getSvg(AppIcons.companyLogo),
+                //   ),
+                // )
               ],
             ),
           ),
