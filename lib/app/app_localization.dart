@@ -33,7 +33,8 @@ class AppLocalization {
         HiveUtils.getLanguage()['data'] == null) {
       mappedJson = json.decode(jsonStringValues);
     } else {
-      mappedJson = Map<String, dynamic>.from(HiveUtils.getLanguage()['data']);
+      mappedJson = json.decode(jsonStringValues);
+      //mappedJson = Map<String, dynamic>.from(HiveUtils.getLanguage()['data']);
     }
     _localizedValues =
         mappedJson.map((key, value) => MapEntry(key, value.toString()));

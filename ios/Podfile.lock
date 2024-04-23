@@ -59,22 +59,22 @@ PODS:
   - Firebase/Messaging (10.22.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 10.22.0)
-  - firebase_analytics (10.8.10):
+  - firebase_analytics (10.8.9):
     - Firebase/Analytics (= 10.22.0)
     - firebase_core
     - Flutter
-  - firebase_auth (4.17.9):
+  - firebase_auth (4.17.8):
     - Firebase/Auth (= 10.22.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.27.1):
+  - firebase_core (2.27.0):
     - Firebase/CoreOnly (= 10.22.0)
     - Flutter
-  - firebase_dynamic_links (5.4.18):
+  - firebase_dynamic_links (5.4.17):
     - Firebase/DynamicLinks (= 10.22.0)
     - firebase_core
     - Flutter
-  - firebase_messaging (14.7.20):
+  - firebase_messaging (14.7.19):
     - Firebase/Messaging (= 10.22.0)
     - firebase_core
     - Flutter
@@ -490,11 +490,11 @@ SPEC CHECKSUMS:
   DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   file_picker: ce3938a0df3cc1ef404671531facef740d03f920
   Firebase: 797fd7297b7e1be954432743a0b3f90038e45a71
-  firebase_analytics: 773f04fad34c0a4e442deb5bcfb6ffc8102b9221
-  firebase_auth: 610184b4f624545f81e0416bca60642b6818f27f
-  firebase_core: d6dfb4cb86a9ebd92464bb8736075fe967211c97
-  firebase_dynamic_links: 9129abba70e20f931bac9c2d630ab8a68cacb591
-  firebase_messaging: f97062a3a7644703ba4892859183c0a59e08d25f
+  firebase_analytics: b9ce200bfc2c54629076bb22d6a510f31c296ab8
+  firebase_auth: 4cf9d126dc9629a77dbcbd23723e903d8277ff5a
+  firebase_core: 100945864b4aedce3cfef0c62ab864858bf013cf
+  firebase_dynamic_links: 6149c6fc3790997eb8a392074e5ee4974840942b
+  firebase_messaging: e65050bf9b187511d80ea3a4de7cf5573d2c7543
   FirebaseAnalytics: 8d0ff929c63b7f72260f332b86ccf569776b75d3
   FirebaseAppCheckInterop: fecc08c89936c8acb1428d8088313aabedb348e4
   FirebaseAuth: bbe4c68f958504ba9e54aee181adbdf5b664fbc6
@@ -562,4 +562,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c1f51bfaf075afe4c615b823b694ebd172c4015a
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.14.3

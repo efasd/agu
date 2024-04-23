@@ -836,7 +836,7 @@ class PropertyDetailsState extends State<PropertyDetails>
                                                         disabled: Constant
                                                                 .isNumberWithSuffix ==
                                                             false)
-                                                    .formatAmount(prefix: true))
+                                                    .formatAmount(prefix: false))
                                                 .color(
                                                     context.color.tertiaryColor)
                                                 .size(18)
@@ -1869,14 +1869,14 @@ class PropertyDetailsState extends State<PropertyDetails>
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
             child: Row(
               children: <Widget>[
-                Expanded(child: callButton()),
-                const SizedBox(
-                  width: 8,
-                ),
-                Expanded(child: messageButton()),
-                const SizedBox(
-                  width: 8,
-                ),
+                // Expanded(child: callButton()),
+                // const SizedBox(
+                //   width: 8,
+                // ),
+                // Expanded(child: messageButton()),
+                // const SizedBox(
+                //   width: 8,
+                // ),
                 Expanded(child: chatButton()),
               ],
             ),

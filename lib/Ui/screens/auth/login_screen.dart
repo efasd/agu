@@ -526,11 +526,11 @@ class LoginScreenState extends State<LoginScreen> {
 
                           // context.read<SendOtpCubit>().setToInitial();
                         }
-                        if (state is SendOtpFailure) {
-                          HelperUtils.showSnackBarMessage(
-                              context, state.errorMessage,
-                              type: MessageType.error);
-                        }
+                        // if (state is SendOtpFailure) {
+                        //   HelperUtils.showSnackBarMessage(
+                        //       context, state.errorMessage,
+                        //       type: MessageType.error);
+                        // }
                       },
                       child: Form(
                         key: _formKey,
@@ -684,7 +684,7 @@ class LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 20.rh(context),
             ),
-            buildTermsAndPrivacyWidget()
+          //  buildTermsAndPrivacyWidget()
           ]),
     );
   }
@@ -822,22 +822,26 @@ class LoginScreenState extends State<LoginScreen> {
   }
 
   Future<void> onTapLogin() async {
-    if (otpIs.length < otpLength) {
-      HelperUtils.showSnackBarMessage(
-          context, UiUtils.translate(context, "lblEnterOtp"),
-          messageDuration: 2);
-      return;
-    }
+     context.read<LoginCubit>().login(
+                              phoneNumber: '1234567890',
+                              fireabseUserId: '1231312',
+                              countryCode: '+91');
+    // if (otpIs.length < otpLength) {
+    //   HelperUtils.showSnackBarMessage(
+    //       context, UiUtils.translate(context, "lblEnterOtp"),
+    //       messageDuration: 2);
+    //   return;
+    // }
 
-    if (widget.isDeleteAccount ?? false) {
-      context
-          .read<VerifyOtpCubit>()
-          .verifyOTP(verificationId: verificationID, otp: otpIs);
-    } else {
-      context
-          .read<VerifyOtpCubit>()
-          .verifyOTP(verificationId: otpVerificationId, otp: otpIs);
-    }
+    // if (widget.isDeleteAccount ?? false) {
+    //   context
+    //       .read<VerifyOtpCubit>()
+    //       .verifyOTP(verificationId: verificationID, otp: otpIs);
+    // } else {
+    //   context
+    //       .read<VerifyOtpCubit>()
+    //       .verifyOTP(verificationId: otpVerificationId, otp: otpIs);
+    // }
   }
 
   Widget buildNextButton(BuildContext context) {

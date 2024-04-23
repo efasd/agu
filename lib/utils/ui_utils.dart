@@ -539,8 +539,10 @@ class UiUtils {
 extension FormatAmount on String {
   String formatAmount({bool prefix = false}) {
     return (prefix)
-        ? "${Constant.currencySymbol}${toString()}"
-        : "${toString()}${Constant.currencySymbol}"; // \u{20B9}"; //currencySymbol
+      ? "₮${toString()}"
+        : "${toString()}₮"; 
+        // ? "${Constant.currencySymbol}${toString()}"
+        // : "${toString()}${Constant.currencySymbol}"; // \u{20B9}"; //currencySymbol
   }
 
   String formatDate({

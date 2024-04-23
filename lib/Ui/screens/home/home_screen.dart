@@ -401,25 +401,27 @@ class HomeScreenState extends State<HomeScreen>
                           } else if (section == HomeScreenSections.MostViewed) {
                             return mostViewedProperties(
                                 homeScreenState, context);
-                          } else if (section ==
-                              HomeScreenSections.PopularCities) {
-                            return Padding(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 10,
-                              ),
-                              child: Column(
-                                children: [
-                                  //    const BannerAdWidget(),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  popularCityProperties(),
-                                ],
-                              ),
-                            );
-                          } else if (section == HomeScreenSections.project) {
+                          // } else if (section ==
+                          //     HomeScreenSections.PopularCities) {
+                          //   return Padding(
+                          //     padding: const EdgeInsets.symmetric(
+                          //       vertical: 10,
+                          //     ),
+                          //     child: Column(
+                          //       children: [
+                          //         //    const BannerAdWidget(),
+                          //         const SizedBox(
+                          //           height: 10,
+                          //         ),
+                          //         popularCityProperties(),
+                          //       ],
+                          //     ),
+                          //   );
+                          } 
+                          else if (section == HomeScreenSections.project) {
                             return buildProjects();
-                          } else {
+                          }
+                           else {
                             return const SizedBox.shrink();
                           }
                         },

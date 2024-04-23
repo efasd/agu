@@ -646,7 +646,7 @@ class _CustomExpansionTileState extends State<CustomExpansionTile> {
       title: Text(widget.title)
           .size(context.font.large)
           .color(context.color.textColorDark.withOpacity(0.9)),
-      dense: true,
+      // dense: true,
       collapsedTextColor: context.color.textColorDark,
       textColor: context.color.textColorDark,
       iconColor: context.color.tertiaryColor,

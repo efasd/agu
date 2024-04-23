@@ -41,13 +41,17 @@ class _OtherInterestsState extends State<OtherInterests> {
             context.read<FetchSystemSettingsCubit>().state;
         if (state is FetchSystemSettingsSuccess) {
           var settingsData = state.settings['data'];
-          var minPrice = double.parse(settingsData['min_price']);
-          var maxPrice = double.parse(settingsData['max_price']);
+          var minPrice = double.parse('500000');
+          var maxPrice = double.parse('5000000');
+          //var maxPrice = double.parse(settingsData['max_price']);
+          print(minPrice);
+          print(maxPrice);
+          
           _priceRangeValues = RangeValues(minPrice, maxPrice);
           if (min != 0.0 && max != 0.0) {
             _selectedRangeValues = RangeValues(min, max);
           } else {
-            _selectedRangeValues = RangeValues(minPrice, maxPrice / 4);
+            _selectedRangeValues = RangeValues(minPrice, maxPrice / 2);
           }
         }
       },
@@ -107,26 +111,26 @@ class _OtherInterestsState extends State<OtherInterests> {
                     Expanded(child: Text(selectedLocation))
                   ],
                 )),
-            const SizedBox(
-              height: 20,
-            ),
-            Text("choosePropertyType".translate(context))
-                .color(context.color.textColorDark)
-                .size(context.font.extraLarge)
-                .centerAlign(),
+            // const SizedBox(
+            //   height: 20,
+            // ),
+            // Text("choosePropertyType".translate(context))
+            //     .color(context.color.textColorDark)
+            //     .size(context.font.extraLarge)
+            //     .centerAlign(),
             const SizedBox(
               height: 10,
             ),
-            PropertyTypeSelector(
-              onInteraction: (List<int> values) {
-                selectedPropertyType = values;
+            // PropertyTypeSelector(
+            //   onInteraction: (List<int> values) {
+            //     selectedPropertyType = values;
 
-                widget.onInteraction
-                    .call(_selectedRangeValues, selectedLocation, values);
+            //     widget.onInteraction
+            //         .call(_selectedRangeValues, selectedLocation, values);
 
-                setState(() {});
-              },
-            ),
+            //     setState(() {});
+            //   },
+            // ),
             const SizedBox(
               height: 25,
             ),
@@ -147,7 +151,7 @@ class _OtherInterestsState extends State<OtherInterests> {
                       Text(_selectedRangeValues.start
                           .toInt()
                           .toString()
-                          .priceFormate()),
+                          .priceFormate()+'₮'),
                     ],
                   ),
                 ),
@@ -175,7 +179,7 @@ class _OtherInterestsState extends State<OtherInterests> {
                       Text(_selectedRangeValues.end
                           .toInt()
                           .toString()
-                          .priceFormate()),
+                          .priceFormate()+'₮'),
                     ],
                   ),
                 ),
@@ -199,7 +203,7 @@ class _OtherInterestsState extends State<OtherInterests> {
         textFieldConfiguration: TextFieldConfiguration(
             controller: _controller,
             decoration: InputDecoration(
-              hintText: "searchCity".translate(context),
+              hintText: "Хайх".translate(context),
               suffixIcon: GestureDetector(
                   onTap: () {
                     _controller.text = "";

@@ -194,8 +194,8 @@ class UserProfileScreenState extends State<UserProfileScreen> {
                               context,
                               title: "phoneNumber",
                               controller: phoneController,
-                              validator: CustomTextFieldValidator.nullCheck,
-                              readOnly: true,
+                              validator: CustomTextFieldValidator.phoneNumber,
+                            //  readOnly: true,
                             ),
                             buildAddressTextField(
                               context,

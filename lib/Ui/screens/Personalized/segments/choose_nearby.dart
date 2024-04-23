@@ -76,13 +76,13 @@ class _NearbyInterestState extends State<NearbyInterest>
               ),
             ],
           ),
-          const SizedBox(
-            height: 10,
-          ),
-          Text("getRecommandation".translate(context))
-              .color(context.color.textColorDark.withOpacity(0.6))
-              .centerAlign()
-              .size(context.font.small),
+          // const SizedBox(
+          //   height: 10,
+          // ),
+          // Text("getRecommandation".translate(context))
+          //     .color(context.color.textColorDark.withOpacity(0.6))
+          //     .centerAlign()
+          //     .size(context.font.small),
           const SizedBox(
             height: 15,
           ),

@@ -118,7 +118,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         backgroundColor: context.color.primaryColor,
         appBar: UiUtils.buildAppBar(
           context,
-          title: UiUtils.translate(context, "myProfile"),
+        //  title: UiUtils.translate(context, "myProfile"),
         ),
         body: ScrollConfiguration(
           behavior: RemoveGlow(),
@@ -295,33 +295,52 @@ class _ProfileScreenState extends State<ProfileScreen>
                         dividerWithSpacing(),
                       ],
 
-                      customTile(
+                      // customTile(
+                      //   context,
+                      //   title: UiUtils.translate(context, "myProjects"),
+                      //   svgImagePath: AppIcons.upcomingProject,
+                      //   onTap: () async {
+                      //     // APICallTrigger.trigger();
+                      //     GuestChecker.check(
+                      //       onNotGuest: () async {
+                      //         Navigator.pushNamed(
+                      //             context, Routes.projectListScreen);
+                      //       },
+                      //     );
+                      //   },
+                      // ),
+                      // dividerWithSpacing(),
+                      // customTile(
+                      //   context,
+                      //   title: UiUtils.translate(context, "myAds"),
+                      //   svgImagePath: AppIcons.promoted,
+                      //   onTap: () async {
+                      //     APICallTrigger.trigger();
+                      //     GuestChecker.check(
+                      //       onNotGuest: () async {
+                      //         Navigator.pushNamed(
+                      //             context, Routes.myAdvertisment);
+                      //       },
+                      //     );
+                      //   },
+                      // ),
+                      // dividerWithSpacing(),
+
+                        customTile(
                         context,
-                        title: UiUtils.translate(context, "myProjects"),
-                        svgImagePath: AppIcons.upcomingProject,
-                        onTap: () async {
-                          // APICallTrigger.trigger();
-                          GuestChecker.check(
-                            onNotGuest: () async {
-                              Navigator.pushNamed(
-                                  context, Routes.projectListScreen);
-                            },
-                          );
-                        },
-                      ),
-                      dividerWithSpacing(),
-                      customTile(
-                        context,
-                        title: UiUtils.translate(context, "myAds"),
-                        svgImagePath: AppIcons.promoted,
-                        onTap: () async {
-                          APICallTrigger.trigger();
-                          GuestChecker.check(
-                            onNotGuest: () async {
-                              Navigator.pushNamed(
-                                  context, Routes.myAdvertisment);
-                            },
-                          );
+                        title: UiUtils.translate(
+                          context,
+                          "personalized",
+                        ),
+                        svgImagePath: AppIcons.magic,
+                        onTap: () {
+                          GuestChecker.check(onNotGuest: () {
+                            Navigator.pushNamed(
+                                context, Routes.personalizedPropertyScreen,
+                                arguments: {
+                                  "type": PersonalizedVisitType.Normal
+                                });
+                          });
                         },
                       ),
                       dividerWithSpacing(),
@@ -350,41 +369,24 @@ class _ProfileScreenState extends State<ProfileScreen>
                       ),
                       dividerWithSpacing(),
 
-                      customTile(
-                        context,
-                        title: UiUtils.translate(
-                          context,
-                          "personalized",
-                        ),
-                        svgImagePath: AppIcons.magic,
-                        onTap: () {
-                          GuestChecker.check(onNotGuest: () {
-                            Navigator.pushNamed(
-                                context, Routes.personalizedPropertyScreen,
-                                arguments: {
-                                  "type": PersonalizedVisitType.Normal
-                                });
-                          });
-                        },
-                      ),
-                      dividerWithSpacing(),
+                    
 
-                      customTile(
-                        context,
-                        title: UiUtils.translate(context, "language"),
-                        svgImagePath: AppIcons.language,
-                        onTap: () {
-                          Navigator.pushNamed(
-                              context, Routes.languageListScreenRoute);
-                        },
-                      ),
-                      dividerWithSpacing(),
+                      // customTile(
+                      //   context,
+                      //   title: UiUtils.translate(context, "language"),
+                      //   svgImagePath: AppIcons.language,
+                      //   onTap: () {
+                      //     Navigator.pushNamed(
+                      //         context, Routes.languageListScreenRoute);
+                      //   },
+                      // ),
+                      // dividerWithSpacing(),
                       ValueListenableBuilder(
                           valueListenable: isDarkTheme,
                           builder: (context, v, c) {
                             return customTile(
                               context,
-                              title: UiUtils.translate(context, "darkTheme"),
+                              title: UiUtils.translate(context, "Dark Mode"),
                               svgImagePath: AppIcons.darkTheme,
                               isSwitchBox: true,
                               onTapSwitch: (value) {

@@ -49,7 +49,7 @@ class Constant {
   /////////////////////////////////
 
   // static late Session session;
-  static String currencySymbol = "\u{20B9}";
+  static String currencySymbol = "₮";
   //
   static int otpTimeOutSecond = AppSettings.otpTimeOutSecond; //otp time out
   static int otpResendSecond = AppSettings.otpResendSecond; // resend otp timer
@@ -194,9 +194,9 @@ modM8h9DRzp9OaAJqxfP960q
 -----END PRIVATE KEY-----''';
 
   //Demo mode settings
-  static bool isDemoModeOn = true;
-  static String demoCountryCode = "976";
-  static String demoMobileNumber = "88112233";
+  static bool isDemoModeOn = false;
+  static String demoCountryCode = "91";
+  static String demoMobileNumber = "1234567890";
   static String demoModeOTP = "123456";
 
   static bool adaptThemeColorSvg = true;
